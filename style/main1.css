@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+}
+.icon {
+  text-align: center;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 500%;
+    color: lime;
+}
+
+h2 {
+    text-align: center;
+}
+article {
+    background: white;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 62.5%;
+}
+
+table {
+    display:block;
+    background-color: white;
+    text-decoration: none;
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+.auteur {
+    width: 100px;
+    height: 130px;
+}
+.resumer {
+    margin-right: 20px;
+    text-align: justify;
+    line-height: 18px;
+}
+time {
+    color: blue;
+}
+.livre {
+    width: 25%;
+    height: 100%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2 {
+text-align: center;
+}
