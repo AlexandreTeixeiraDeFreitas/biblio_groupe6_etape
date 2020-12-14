@@ -9,8 +9,8 @@
 </head>
 </head>
 <body>
-    <img id="icon" alt="html image example" src="img/Manga_Whale.png">
-    <h1>Manga kyōjin</h1>
+    
+    <h1><img alt="html icon" src="img/Manga_Whale.png"><br>Manga kyōjin</h1>
     <?php require "nav.php"; ?>
     <article>
         <section>

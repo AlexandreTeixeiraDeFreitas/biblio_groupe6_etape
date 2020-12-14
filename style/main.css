@@ -1,11 +1,7 @@
 body {
     background-color: black;
 }
-#icon {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 h1{
     text-align: center;
     font-size: 500%;
