@@ -9,14 +9,14 @@
 </head>
 </head>
 <body>
-    
+
     <h1><img alt="html icon" src="img/Manga_Whale.png"><br>Manga kyōjin</h1>
     <?php require "nav.php"; ?>
     <article>
         <section>
             <ul>
                 <li class=titre><h3> Attaque des Titans</h3></li>
-                <li class=description><a href="livre/isbn1.php"><img class=livre alt="SNK" src="img/ADT.jpg"></a></li>
+                <li class=description><a href="livre/9782811611699.php"><img class=livre alt="SNK" src="img/ADT.jpg"></a></li>
                     <div>
                                     <p class=resumer><strong>Titre:</strong> Attaque des Titans<br>
                                     <strong>Type :</strong> Shonen<br>
@@ -25,13 +25,13 @@
                                     <strong>Date de parution: </strong>TOME 1: <time datetime="2015-10-07">07/10/2015</time><br>
                                     <strong>Auteur: </strong>Isayama Hajime</p>
                     </div>
-                
+
             </ul>
         </section>
         <section>
             <ul>
                 <li class=titre><h3>Dragon Ball Z - 1re partie: les Saïyens</h3></li>
-                <li class=description><a href="livre/isbn2.php"><img class=livre alt="DBZ" src="img/DBZ.jpg"></a></li>
+                <li class=description><a href="livre/9782723457897.php"><img class=livre alt="DBZ" src="img/DBZ.jpg"></a></li>
                     <div>
                                     <p class=resumer><strong>Titre:</strong> Dragon Ball Z - 1re partie: les Saïyens<br>
                                     <strong>Type :</strong> Shonen<br>
@@ -40,13 +40,13 @@
                                     <strong>Date de parution: </strong>TOME 1: <time datetime="2008-04-16">16/04/2008</time><br>
                                     <strong>Auteur: </strong>Akira toriyama</p>
                     </div>
-                
+
             </ul>
         </section>
         <section>
             <ul>
                 <li class=titre><h3>Fairy Tail</h3></li>
-                <li class=description><a href="livre/isbn3.php"><img class=livre alt="Fairy tail" src="img/Fairy_tail.jpg"></a>
+                <li class=description><a href="livre/9782811640569.php"><img class=livre alt="Fairy tail" src="img/Fairy_tail.jpg"></a>
                     <div>
                                     <p class=resumer><strong>Titre:</strong> Fairy Tail<br>
                                     <strong>Type :</strong> Shonen<br>
@@ -61,7 +61,7 @@
         <section>
             <ul>
                 <li class=titre><h3>Hunter X Hunter</h3></li>
-                <li class=description><a href="livre/isbn4.php"><img class=livre alt="Hunter X hunter" src="img/HunterXhunter.jpg"></a>
+                <li class=description><a href="livre/2505006474.php"><img class=livre alt="Hunter X hunter" src="img/HunterXhunter.jpg"></a>
                     <div>
                                     <p class=resumer><strong>Titre:</strong> Hunter X Hunter<br>
                                     <strong>Type :</strong> Shonen<br>
@@ -76,7 +76,7 @@
         <section>
             <ul>
                 <li class=titre><h3>My Hero Academia</h3></li>
-                <li class=description><a href="livre/isbn5.php"><img class=livre alt="My hero Academia" src="img/My_hero_Academia.jpg"></a>
+                <li class=description><a href="livre/9782355929489.php"><img class=livre alt="My hero Academia" src="img/My_hero_Academia.jpg"></a>
                     <div>
                                     <p class=resumer><strong>Titre:</strong> My Hero Academia<br>
                                     <strong>Type :</strong> Shonen<br>
@@ -91,7 +91,7 @@
         <section>
             <ul>
                 <li class=titre><h3>Naruto</h3></li>
-                <li class=description><a href="livre/isbn6.php"><img class=livre alt="Naruto" src="img/Naruto.jpg"></a>
+                <li class=description><a href="livre/9782871294146.php"><img class=livre alt="Naruto" src="img/Naruto.jpg"></a>
                     <div>
                                     <p class=resumer><strong>Titre:</strong> Naruto<br>
                                     <strong>Type :</strong> Shonen<br>
@@ -106,7 +106,7 @@
         <section>
             <ul>
                 <li class=titre><h3>One Piece - Édition originale:</h3></li>
-                <li class=description><a href="livre/isbin7.php"><img class=livre alt="One piece" src="img/One_piece.jpg"></a>
+                <li class=description><a href="livre/9782723488525.php"><img class=livre alt="One piece" src="img/One_piece.jpg"></a>
                     <div>
                                     <p class=resumer><strong>Titre:</strong> One Piece - Édition originale:<br>
                                     <strong>Type :</strong> Shonen<br>
@@ -121,7 +121,7 @@
         <section>
             <ul>
                 <li class=titre><h3>One Punch Man</h3></li>
-                <li class=description><a href="livre/isbn8.php"><img class=livre alt="One punch man" src="img/One_punch_man.jpg"></a>
+                <li class=description><a href="livre/9782368522257.php"><img class=livre alt="One punch man" src="img/One_punch_man.jpg"></a>
                     <div>
                                     <p class=resumer><strong>Titre:</strong> One Punch Man<br>
                                     <strong>Type :</strong> Seinen<br>
@@ -136,7 +136,7 @@
         <section>
             <ul>
                 <li class=titre><h3>Re:Zero Premier arc : Une journée à la capitale :</h3></li>
-                <li class=description><a href="livre/isbn9.php"><img class=livre alt="Re Zero" src="img/Re_Zero.jpg"></a>
+                <li class=description><a href="livre/9782377170067.php"><img class=livre alt="Re Zero" src="img/Re_Zero.jpg"></a>
                     <div>
                                     <p class=resumer><strong>Titre:</strong> Re:Zero Premier arc : Une journée à la capitale :<br>
                                     <strong>Type :</strong> Seinen<br>
@@ -151,14 +151,44 @@
         <section>
             <ul>
                 <li class=titre><h3>Sword Art Online - Project Alicization, Tome 1 </h3></li>
-                <li class=description><a href="livre/isbn10.php"><img class=livre alt="SAO" src="img/SAO.jpg"></a>
+                <li class=description><a href="livre/9782377171200.php"><img class=livre alt="SAO" src="img/SAO.jpg"></a>
                     <div>
                                     <p class=resumer><strong>Titre:</strong> Sword Art Online - Project Alicization, Tome 1<br>
                                     <strong>Type :</strong> Shonen<br>
                                     <strong>Edition VF: </strong> Ototo<br>
-                                    <strong>ISBN :</strong> 9782723488525<br>
+                                    <strong>ISBN :</strong> 9782377171200<br>
                                     <strong>Date de parution: </strong>TOME 1: <time datetime="2018-06-15">15/06/2018</time><br>
                                     <strong>Auteur: </strong>Kawahara Reki</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li class=titre><h3>Made in abyss, Tome 1 </h3></li>
+                <li class=description><a href="livre/9782377171170.php"><img class=livre alt="Made in abyss" src="img/made_in_abyss.jpg"></a>
+                    <div>
+                                    <p class=resumer><strong>Titre:</strong> Made in abyss, Tome 1<br>
+                                    <strong>Type :</strong> Seinen<br>
+                                    <strong>Edition VF: </strong> Ototo<br>
+                                    <strong>ISBN :</strong> 9782377171170<br>
+                                    <strong>Date de parution: </strong>TOME 1: <time datetime="2002-03-09">18/05/2018</time></time><br>
+                                    <strong>Auteur: </strong>Tsukushi Akihito</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <ul>
+                <li class=titre><h3>Demon Slayer, Tome 1 </h3></li>
+                <li class=description><a href="livre/9782809484069.php"><img class=livre alt="Demon Slayer" src="img/demon_slayer.jpg"></a>
+                    <div>
+                                    <p class=resumer><strong>Titre:</strong>Demon Slayer, Tome 1<br>
+                                    <strong>Type :</strong> Shonen<br>
+                                    <strong>Edition VF: </strong> Panini<br>
+                                    <strong>ISBN :</strong> 9782809484069<br>
+                                    <strong>Date de parution: </strong>TOME 1: <time datetime="2018-06-15">18/09/2019</time><br>
+                                    <strong>Auteur: </strong>Gotoge Koyoharu</p>
                     </div>
                 </li>
             </ul>
