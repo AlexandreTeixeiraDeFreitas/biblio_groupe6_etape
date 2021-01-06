@@ -13,17 +13,23 @@
         echo "Erreur de débogage : " . mysqli_connect_error() . PHP_EOL;
         exit;
     }
-    $req = "SELECT * FROM `livre` JOIN langue ON livre.langue = 1 AND livre.langue = langue.id;";
+    $req = "SELECT manga.titre, manga.isbn, genre.libelle, manga.resumer, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.lieu FROM `manga` 
+    JOIN auteur ON manga.isbn=9782811611699 AND manga.isbn=auteur.idLivre 
+    JOIN editeur ON manga.editeur=editeur.id JOIN personne ON auteur.idPersonne=personne.id 
+    JOIN genre ON manga.genre=genre.id;";
     $result = mysqli_query($link,$req);
-
     if($result) {
         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-            echo "<p>titre : " . $row["titre"] . "<br>";
-            echo "Année : " . $row["annee"] . "</p>";
-            echo "isbn : " . $row["isbn"] . "<br>";
-
-        }
-        
+    ?>
+    <?php echo "<p>titre : " . $row["titre"] . "<br>"; ?>
+    <?php
+            echo "Année : " . $row["annee"] . "<br>";
+    ?>
+    <?php
+            echo "isbn : " . $row["isbn"] . "</p>";
+    ?>
+    <?php
+    }    
     }
     mysqli_close($link);
     ?>
