@@ -9,7 +9,7 @@
         exit;
     }
     $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.lieu FROM `manga` 
-    JOIN auteur ON manga.isbn=978211640569 AND manga.isbn=auteur.idLivre 
+    JOIN auteur ON manga.isbn=9782811640569 AND manga.isbn=auteur.idLivre 
     JOIN editeur ON manga.editeur=editeur.id JOIN personne ON auteur.idPersonne=personne.id 
     JOIN genre ON manga.genre=genre.id;";
     $result = mysqli_query($link,$req);
