@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 30 déc. 2020 à 10:52
+-- Généré le : mer. 06 jan. 2021 à 18:21
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -136,7 +136,6 @@ INSERT INTO `manga` (`isbn`, `titre`, `editeur`, `annee`, `genre`, `resumer`) VA
 ('9782377171200', 'Sword Art Online - Project Alicization, Tome 1', 6, '15/06/2018', 1, 'Kirito se retrouve livré à lui-même après s’être réveiller dans l’Underworld, un mystérieux monde virtuel. Incapable de rejoindre la réalité, il fait la connaissance d’Eugeo, un jeune habitant du village de Rulid rongé par les remords suite à la disparition de son amie d’enfance, Alice. A la recherche de réponses et d’une porte de sortie, les deux garçons se lancent dans une périlleuse quête aux enjeux bien plus importants qu’ils ne pouvaient l’imaginer'),
 ('9782377171170', 'Made in abyss, Tome 1', 6, '18/05/2018', 2, 'Rico, une enfant elevee dans un orphelinat au bord de l Abyss, a toujours reve d explorer le gouffre comme sa mere, une exploratrice reputee mais disparue depuis plusieurs annees. Malheureusement, elle doit se limiter au premier niveau, car elle est encore peu experimentee. Un jour, elle croise par hasard la route de Legu, un robot qui semble venir des profondeurs de l Abyss. Cette decouverte, conjointe a une lettre de sa mere, la decide a franchir le pas et a debuter sa descente.'),
 ('9782809484069', 'Demon Slayer, Tome 1', 7, '18/09/2019', 1, 'Depuis les temps anciens, il existe des rumeurs concernant des demons mangeurs d\'hommes qui se cachent dans les bois. Pour cette raison, les citadins locaux ne s\'y aventurent jamais la nuit. La legende raconte aussi qu\'un tueur de demons deambule la nuit, chassant ces demons assoiffes de sang. Pour le jeune Tanjirou, ces rumeurs vont bientot devenir sa dure realite ...');
-
 
 -- --------------------------------------------------------
 
