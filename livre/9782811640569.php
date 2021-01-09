@@ -8,7 +8,7 @@
         echo "Erreur de débogage : " . mysqli_connect_error() . PHP_EOL;
         exit;
     }
-    $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.lieu FROM `manga` 
+    $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.image, manga.image2, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.photo, personne.lieu, manga.lien_amazon FROM `manga` 
     JOIN auteur ON manga.isbn=9782811640569 AND manga.isbn=auteur.idLivre 
     JOIN editeur ON manga.editeur=editeur.id JOIN personne ON auteur.idPersonne=personne.id 
     JOIN genre ON manga.genre=genre.id;";
@@ -19,7 +19,7 @@
 <article>
     <ul>
         <li><h2><?php echo $row["titre"]; ?></h2></li>
-            <li><img class=livre alt="Fairy tail" src="../img/Fairy_tail.jpg">
+        <li><?php echo "<img class=livre src=" . $row["image2"];?> alt="image livre">
             <div>
                 <table>
                     <tr>
@@ -34,11 +34,11 @@
                             <p><strong>Edition VF :</strong><?php echo $row["edition"]; ?></p>
                             <p><strong>ISBN :</strong><?php echo $row["isbn"]; ?></p>
                             <p><strong>Date de parution: </strong>TOME 63: <time datetime="2015-10-07"><?php echo $row["annee"]; ?></time></p>
-                                <p><a href="https://www.amazon.fr/Fairy-Tail-T63-Hiro-Mashima/dp/2811640568/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=tome+63+fairy+tail&qid=1605470916&sr=8-1fr%2FFairy-Tail-T63-Hiro-Mashima%2Fdp%2F2811640568%2Fref%3Dsr_1_1%3F__mk_fr_FR%3D%25C3%2585M%25C3%2585%25C5%25BD%25C3%2595%25C3%2591%26dchild%3D1%26keywords%3Dtome%2B63%2Bfairy%2Btail%26qid%3D1605470916%26sr%3D8-1">lien amazon</a></p>
-                            </td>
-                            <td>
-                                <p>Hiro Mashima <img class=auteur alt="Hiro Mashima" src="../img/Hiro_Mashima_-_Japan_Expo_2010_-_Day3_-_P1460391.jpg">03/05/1977 (Âge: 43 ans), Nagano, Préfecture de Nagano, Japon</p>
-                                </td>
+                            <p><?php echo "<a href=" . $row["lien_amazon"]; ?> >lien amazon</a> </p>
+                        </td>
+                        <td>
+                            <p><?php echo $row["nom"] . $row["prenom"] . "<img class=auteur src=". $row["photo"] . ">" . $row["dt_naissance"] . "<br>" . $row["lieu"]; ?></p>
+                        </td>
                     </tr>
                 </table>
             </div>

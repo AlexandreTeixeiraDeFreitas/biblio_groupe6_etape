@@ -8,7 +8,7 @@
         echo "Erreur de débogage : " . mysqli_connect_error() . PHP_EOL;
         exit;
     }
-    $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.lieu FROM `manga` 
+    $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.image, manga.image2, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.photo, personne.lieu, manga.lien_amazon FROM `manga` 
     JOIN auteur ON manga.isbn=9782871294146 AND manga.isbn=auteur.idLivre 
     JOIN editeur ON manga.editeur=editeur.id JOIN personne ON auteur.idPersonne=personne.id 
     JOIN genre ON manga.genre=genre.id;";
@@ -19,7 +19,7 @@
 <article>
     <ul>
         <li><h2><?php echo $row["titre"]; ?></h2></li>
-            <li><img class=livre alt="Naruto" src="../img/Naruto.jpg">
+        <li><?php echo "<img class=livre src=" . $row["image2"];?> alt="image livre">
             <div>
                 <table>
                     <tr>
@@ -33,12 +33,12 @@
                             <p class=resumer><strong>Synopsis :</strong><?php echo $row["resumer"]; ?></p>
                             <p><strong>Edition VF :</strong><?php echo $row["edition"]; ?></p>
                             <p><strong>ISBN :</strong><?php echo $row["isbn"]; ?></p>
-                            <p><strong>Date de parution: </strong>TOME 1: <time datetime="2015-10-07"><?php echo $row["annee"]; ?></time></p>
-                                <p><a href="https://www.amazon.fr/Naruto-1-Masashi-Kishimoto/dp/2871294143/ref=tmm_mmp_swatch_0?_encoding=UTF8&qid=1605480573&sr=8-2">Lien amazon</a></p>
-                            </td>
-                            <td>
-                                <p>Kishimoto Masashi <img class=auteur alt="kishimoto masashi" src="../img/kishimoto_masashi.jpg">08/11/1974 (Âge: 46 ans), Nagi, Préfecture d'Okayama, Japon</p>
-                                </td>
+                            <p><strong>Date de parution: </strong>TOME 63: <time datetime="2015-10-07"><?php echo $row["annee"]; ?></time></p>
+                            <p><?php echo "<a href=" . $row["lien_amazon"]; ?> >lien amazon</a> </p>
+                        </td>
+                        <td>
+                            <p><?php echo $row["nom"] . $row["prenom"] . "<img class=auteur src=". $row["photo"] . ">" . $row["dt_naissance"] . "<br>" . $row["lieu"]; ?></p>
+                        </td>
                     </tr>
                 </table>
             </div>

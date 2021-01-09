@@ -8,7 +8,7 @@
         echo "Erreur de débogage : " . mysqli_connect_error() . PHP_EOL;
         exit;
     }
-    $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.lieu FROM `manga` 
+    $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.image, manga.image2, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.photo, personne.lieu, manga.lien_amazon FROM `manga` 
     JOIN auteur ON manga.isbn=9782377171200 AND manga.isbn=auteur.idLivre 
     JOIN editeur ON manga.editeur=editeur.id JOIN personne ON auteur.idPersonne=personne.id 
     JOIN genre ON manga.genre=genre.id;";
@@ -19,8 +19,8 @@
 <article>
     <ul>
         <li><h2><?php echo $row["titre"]; ?></h2></li>
-        <li class=description><img class=livre alt="SAO" src="../img/SAO.jpg">
-        <div>
+        <li><?php echo "<img class=livre src=" . $row["image2"];?> alt="image livre">
+            <div>
                 <table>
                     <tr>
                         <th>Description</th>
@@ -34,11 +34,11 @@
                             <p><strong>Edition VF :</strong><?php echo $row["edition"]; ?></p>
                             <p><strong>ISBN :</strong><?php echo $row["isbn"]; ?></p>
                             <p><strong>Date de parution: </strong>TOME 1: <time datetime="2015-10-07"><?php echo $row["annee"]; ?></time></p>
-                            <p><a href="https://www.amazon.fr/Sword-Art-Online-Project-Alicization/dp/2377171206/ref=sr_1_3?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=sword+art+online+tome+1&qid=1605480988&sr=8-3">Lien amazon</a></p>
+                            <p><?php echo "<a href=" . $row["lien_amazon"]; ?> >lien amazon</a> </p>
                         </td>
                         <td>
-                            <p>Kawahara Reki <img class=auteur alt="Kawahara Reki" src="../img/Kawahara_Reki.jpg">17/08/1974 (Âge: 46 ans), Gunma</p>
-                            </td>
+                            <p><?php echo $row["nom"] . $row["prenom"] . "<img class=auteur src=". $row["photo"] . ">" . $row["dt_naissance"] . "<br>" . $row["lieu"]; ?></p>
+                        </td>
                     </tr>
                 </table>
             </div>
