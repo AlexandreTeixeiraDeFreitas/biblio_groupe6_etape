@@ -10,6 +10,7 @@
 <body>
 
     <h1><img alt="html icon" src="img/Manga_Whale.png"><br>Manga kyōjin</h1>
+    <?php require "config.php"; ?>
     <?php require "nav.php"; ?>
     <?php
     $link = mysqli_connect("localhost", "root", "", "bibliotheque");

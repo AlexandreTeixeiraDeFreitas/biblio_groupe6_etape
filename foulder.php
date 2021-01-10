@@ -3,7 +3,7 @@
 <head>
     <title>Manga kyōjin</title>
     <meta charset="utf-8"/>
-    <link rel="shortcut icon" href="/biblio_groupe6_etape2/biblio_groupe6_etape2/biblio_groupe6_etape/img/Manga_Whale.png">
+    <link rel="shortcut icon" href="<?php echo $CONFIG['root_path'] ?>img/Manga_Whale.png">
     <link rel="stylesheet" href="/biblio_groupe6_etape2/biblio_groupe6_etape2/biblio_groupe6_etape/style/main1.css">
     <link rel="stylesheet" href="/biblio_groupe6_etape2/biblio_groupe6_etape2/biblio_groupe6_etape/style/nav.css">
 </head>

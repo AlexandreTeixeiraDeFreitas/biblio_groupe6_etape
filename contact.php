@@ -1,3 +1,4 @@
+<?php require "config.php"; ?>
 <?php require "foulder.php"; ?>
     <?php require "nav.php"; ?>
     <article>

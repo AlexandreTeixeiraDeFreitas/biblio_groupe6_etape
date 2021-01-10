@@ -1,5 +1,7 @@
+<?php require "../config.php"; ?>
 <?php require "../foulder.php"; ?>
     <?php require "../nav.php"; ?>
+
     <?php
     $link = mysqli_connect("localhost", "root", "", "bibliotheque");
     if (!$link) {
