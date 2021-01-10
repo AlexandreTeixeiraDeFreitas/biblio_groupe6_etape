@@ -37,7 +37,7 @@
                             <p><?php echo "<a href=" . $row["lien_amazon"]; ?> >lien amazon</a> </p>
                         </td>
                         <td>
-                            <p><?php echo $row["nom"] . $row["prenom"] . "<img class=auteur src=". $row["photo"] . ">" . $row["dt_naissance"] . "<br>" . $row["lieu"]; ?></p>
+                        <p><?php echo $row["nom"] . " " . $row["prenom"] . "<img class=auteur src=". $row["photo"] . ">" . $row["dt_naissance"] . "<br>" . $row["lieu"]; ?></p>
                         </td>
                     </tr>
                 </table>

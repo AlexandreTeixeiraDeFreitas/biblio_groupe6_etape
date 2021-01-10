@@ -8,10 +8,17 @@
         echo "Erreur de débogage : " . mysqli_connect_error() . PHP_EOL;
         exit;
     }
+    if(isset($_GET["isbn"])){
+        $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.image, manga.image2, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.photo, personne.lieu, manga.lien_amazon FROM `manga` 
+        JOIN auteur ON manga.isbn=" . $_GET["isbn"] . "AND manga.isbn=auteur.idLivre 
+        JOIN editeur ON manga.editeur=editeur.id JOIN personne ON auteur.idPersonne=personne.id 
+        JOIN genre ON manga.genre=genre.id;";
+      }else{
     $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.image, manga.image2, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.photo, personne.lieu, manga.lien_amazon FROM `manga` 
     JOIN auteur ON manga.isbn=9782811611699 AND manga.isbn=auteur.idLivre 
     JOIN editeur ON manga.editeur=editeur.id JOIN personne ON auteur.idPersonne=personne.id 
     JOIN genre ON manga.genre=genre.id;";
+}
     $result = mysqli_query($link,$req);
     if($result) {
         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -37,7 +44,7 @@
                             <p><?php echo "<a href=" . $row["lien_amazon"]; ?> >lien amazon</a> </p>
                         </td>
                         <td>
-                            <p><?php echo $row["nom"] . $row["prenom"] . "<img class=auteur src=". $row["photo"] . ">" . $row["dt_naissance"] . "<br>" . $row["lieu"]; ?></p>
+                        <p><?php echo $row["nom"] . " " . $row["prenom"] . "<img class=auteur src=". $row["photo"] . ">" . $row["dt_naissance"] . "<br>" . $row["lieu"]; ?></p>
                         </td>
                     </tr>
                 </table>

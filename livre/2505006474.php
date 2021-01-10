@@ -8,7 +8,6 @@
         echo "Erreur de débogage : " . mysqli_connect_error() . PHP_EOL;
         exit;
     }
-    
     $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.image, manga.image2, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.photo, personne.lieu, manga.lien_amazon FROM `manga` 
     JOIN auteur ON manga.isbn=2505006474 AND manga.isbn=auteur.idLivre 
     JOIN editeur ON manga.editeur=editeur.id JOIN personne ON auteur.idPersonne=personne.id 
@@ -38,7 +37,7 @@
                             <p><?php echo "<a href=" . $row["lien_amazon"]; ?> >lien amazon</a> </p>
                         </td>
                         <td>
-                            <p><?php echo $row["nom"] . $row["prenom"] . "<img class=auteur src=". $row["photo"] . ">" . $row["dt_naissance"] . "<br>" . $row["lieu"]; ?></p>
+                            <p><?php echo $row["nom"] . " " . $row["prenom"] . "<img class=auteur src=". $row["photo"] . ">" . $row["dt_naissance"] . "<br>" . $row["lieu"]; ?></p>
                         </td>
                     </tr>
                 </table>
