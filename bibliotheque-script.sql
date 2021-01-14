@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 14 jan. 2021 à 09:45
+-- Généré le : jeu. 14 jan. 2021 à 10:10
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `auteur` (
   `idPersonne` int(11) NOT NULL AUTO_INCREMENT,
   `idLivre` varchar(15) NOT NULL,
   PRIMARY KEY (`idPersonne`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `auteur`
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `editeur` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `edition` varchar(150) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `editeur`
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `genre` (
   `libelle` varchar(150) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `libelle` (`libelle`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `genre`
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `manga` (
   `isbn` varchar(15) NOT NULL,
   `titre` varchar(500) NOT NULL,
   `editeur` int(11) NOT NULL,
-  `annee` varchar(225) CHARACTER SET utf8 DEFAULT NULL,
+  `annee` varchar(225) DEFAULT NULL,
   `genre` int(11) DEFAULT NULL,
   `resumer` varchar(1500) NOT NULL,
   `image` varchar(50) NOT NULL,
@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `manga` (
   `id` int(11) NOT NULL,
   `image2` varchar(50) NOT NULL,
   PRIMARY KEY (`isbn`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `manga`
@@ -154,8 +154,8 @@ CREATE TABLE IF NOT EXISTS `personne` (
   `nom` varchar(150) NOT NULL,
   `prenom` varchar(255) DEFAULT NULL,
   `dt_naissance` varchar(11) NOT NULL,
-  `lieu` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `photo` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `lieu` varchar(50) NOT NULL,
+  `photo` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
