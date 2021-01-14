@@ -22,16 +22,17 @@
     }
     $id=1;
     echo "<article>";
-    while($id<=12) {
-    $req = "SELECT manga.id, manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.image, manga.annee, manga.lien, personne.nom, personne.prenom, personne.dt_naissance, personne.photo, personne.lieu, manga.lien_amazon FROM `manga` 
-    JOIN auteur ON manga.id=$id AND manga.isbn=auteur.idLivre 
+    $req = "SELECT DISTINCT manga.id, manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.image, manga.annee, manga.lien, personne.nom, personne.prenom FROM `manga` 
+    JOIN auteur ON manga.isbn=auteur.idLivre 
     JOIN editeur ON manga.editeur=editeur.id JOIN personne ON auteur.idPersonne=personne.id 
     JOIN genre ON manga.genre=genre.id;";
     $result = mysqli_query($link,$req);
     if($result) {
+        while($id<=12) {
         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+   
     ?>
-    
+
 
         <section>
             <ul>
@@ -49,6 +50,7 @@
 
             </ul>
         </section>
+        
 
 <?php
 $id++;

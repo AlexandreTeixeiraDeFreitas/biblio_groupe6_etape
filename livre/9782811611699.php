@@ -11,8 +11,9 @@
         exit;
     }
     if(isset($_GET["isbn"])){
+        $isbn= $_GET["isbn"];
         $req = "SELECT manga.titre, manga.isbn, genre.libelle, editeur.edition, manga.resumer, manga.image, manga.image2, manga.annee, personne.nom, personne.prenom, personne.dt_naissance, personne.photo, personne.lieu, manga.lien_amazon FROM `manga` 
-        JOIN auteur ON manga.isbn=" . $_GET["isbn"] . "AND manga.isbn=auteur.idLivre 
+        JOIN auteur ON manga.isbn=$isbn AND manga.isbn=auteur.idLivre 
         JOIN editeur ON manga.editeur=editeur.id JOIN personne ON auteur.idPersonne=personne.id 
         JOIN genre ON manga.genre=genre.id;";
       }else{
