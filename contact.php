@@ -2,7 +2,7 @@
 <?php require "foulder.php"; ?>
     <?php require "nav.php"; ?>
     <article>
-    <form method="post" action="receive.php">
+    <form method="livre" action="receive.php">
         <fieldset>
         <fieldset>
             <legend>informations sur le client</legend>
